@@ -10,7 +10,7 @@ export default function Dictionary() {
   }
 
   function handleKeywordChange(event) {
-    console.log(event);
+    setKeyword(event.event.value);
   }
 
   return (
