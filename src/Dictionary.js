@@ -2,7 +2,8 @@ import React from "react";
 import "./Dictionary.css";
 
 export default function Dictionary() {
-  function search() {
+  function search(event) {
+    event.preventDefault();
     alert("Searching");
   }
 
