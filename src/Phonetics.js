@@ -1,23 +1,14 @@
 import React from "react";
-import Synonyms from "./Synonyms";
+import "./Phonetic.css";
 
-export default function Meaning(props) {
+export default function Phonetic(props) {
+  console.log(props.phonetic);
   return (
-    <div className="Meaning">
-      <h3>{props.meaning.partOfSpeech}</h3>
-      {props.meaning.definitions.map(function (definition, index) {
-        return (
-          <div key={index}>
-            <p>
-              <strong>Definition:</strong> {definition.definition}
-              <br />
-              <strong>Example:</strong>
-              <em>{definition.example}</em>
-              <Synonyms synonyms={definition.synonyms} />
-            </p>
-          </div>
-        );
-      })}
+    <div className="Phonetic">
+      <a href={props.phonetic.audio} target="_blank">
+        Listen
+      </a>
+      <span className="text">{props.phonetic.text}</span>
     </div>
   );
 }
