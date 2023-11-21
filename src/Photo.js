@@ -2,11 +2,11 @@ import React from "react";
 import "./Photo.css";
 
 export default function Photos(props) {
-  if (props.photos) {
+  if (props.photo) {
     return (
-      <section className="Photos">
+      <section className="Photo">
         <div className="row">
-          {props.photos.map(function (photo, index) {
+          {props.photo.map(function (photo, index) {
             return (
               <div className="col-4" key={index}>
                 <a

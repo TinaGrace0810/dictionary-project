@@ -15,7 +15,7 @@ export default function Dictionary(props) {
   }
 
   function handlePexelsResponse(response) {
-    setPhotos(response.data.photos);
+    setPhoto(response.data.photo);
   }
 
   function search() {
