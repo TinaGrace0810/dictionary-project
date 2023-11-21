@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Results from "./Results";
-import Photos from "./Photo";
+import Photo from "./Photo";
 import "./Dictionary.css";
 
 export default function Dictionary(props) {
   let [keyword, setKeyword] = useState(props.defaultKeyword);
   let [results, setResults] = useState(null);
   let [loaded, setLoaded] = useState(false);
-  let [photos, setPhotos] = useState(null);
+  let [photo, setPhoto] = useState(null);
 
   function handleDictionResponse(response) {
     setResults(response.data[0]);
@@ -58,7 +58,7 @@ export default function Dictionary(props) {
           </div>
         </section>
         <Results results={results} />
-        <Photos photos={photos} />
+        <Photo photo={photo} />
       </div>
     );
   } else {
