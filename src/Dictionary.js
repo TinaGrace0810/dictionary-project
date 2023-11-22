@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import Result from "./Result";
+import Results from "./Results";
 import Photo from "./Photo";
 import "./Dictionary.css";
 
@@ -11,7 +11,7 @@ export default function Dictionary(props) {
   const [photo, setPhoto] = useState([]);
 
   function handleImages(response) {
-    setPhotos(response.data.photos);
+    setPhoto(response.data.photos);
   }
 
   function handleResponse(response) {
@@ -60,7 +60,7 @@ export default function Dictionary(props) {
           </form>
           <small className="hint">i.e. paris, wine, yoga, coding</small>
         </section>
-        <Result definition={definition} />
+        <Results results={definition} />
         <Photo photo={photo} />
       </div>
     );
